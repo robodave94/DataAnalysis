@@ -1,0 +1,10 @@
+C:\Users\DavidH\source\repos\TestApp\TestApp\bin\Debug\TestApp.exe.config
+C:\Users\DavidH\source\repos\TestApp\TestApp\bin\Debug\TestApp.exe
+C:\Users\DavidH\source\repos\TestApp\TestApp\bin\Debug\TestApp.pdb
+C:\Users\DavidH\source\repos\TestApp\TestApp\obj\Debug\TestApp.csprojResolveAssemblyReference.cache
+C:\Users\DavidH\source\repos\TestApp\TestApp\obj\Debug\TestApp.Properties.Resources.resources
+C:\Users\DavidH\source\repos\TestApp\TestApp\obj\Debug\TestApp.csproj.GenerateResource.cache
+C:\Users\DavidH\source\repos\TestApp\TestApp\obj\Debug\TestApp.csproj.CoreCompileInputs.cache
+C:\Users\DavidH\source\repos\TestApp\TestApp\obj\Debug\TestApp.exe
+C:\Users\DavidH\source\repos\TestApp\TestApp\obj\Debug\TestApp.pdb
+C:\Users\DavidH\source\repos\TestApp\TestApp\obj\Debug\TestApp.colToUse.resources
