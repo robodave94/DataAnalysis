@@ -1,0 +1,10 @@
+C:\Users\DavidH\source\repos\DataAnalysisApp\TestApp\TestApp\bin\Release\TestApp.exe.config
+C:\Users\DavidH\source\repos\DataAnalysisApp\TestApp\TestApp\bin\Release\TestApp.exe
+C:\Users\DavidH\source\repos\DataAnalysisApp\TestApp\TestApp\bin\Release\TestApp.pdb
+C:\Users\DavidH\source\repos\DataAnalysisApp\TestApp\TestApp\obj\Release\TestApp.colToUse.resources
+C:\Users\DavidH\source\repos\DataAnalysisApp\TestApp\TestApp\obj\Release\TestApp.Properties.Resources.resources
+C:\Users\DavidH\source\repos\DataAnalysisApp\TestApp\TestApp\obj\Release\ApplicationProj.csproj.GenerateResource.cache
+C:\Users\DavidH\source\repos\DataAnalysisApp\TestApp\TestApp\obj\Release\ApplicationProj.csproj.CoreCompileInputs.cache
+C:\Users\DavidH\source\repos\DataAnalysisApp\TestApp\TestApp\obj\Release\TestApp.exe
+C:\Users\DavidH\source\repos\DataAnalysisApp\TestApp\TestApp\obj\Release\TestApp.pdb
+C:\Users\DavidH\source\repos\DataAnalysisApp\TestApp\TestApp\obj\Release\ApplicationProj.csprojResolveAssemblyReference.cache
