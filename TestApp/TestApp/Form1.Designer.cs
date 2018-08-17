@@ -155,7 +155,7 @@
             // 
             // cngName
             // 
-            this.cngName.Location = new System.Drawing.Point(789, 49);
+            this.cngName.Location = new System.Drawing.Point(789, 55);
             this.cngName.Name = "cngName";
             this.cngName.Size = new System.Drawing.Size(150, 23);
             this.cngName.TabIndex = 10;
@@ -165,7 +165,7 @@
             // 
             // addColomn
             // 
-            this.addColomn.Location = new System.Drawing.Point(945, 48);
+            this.addColomn.Location = new System.Drawing.Point(945, 55);
             this.addColomn.Name = "addColomn";
             this.addColomn.Size = new System.Drawing.Size(73, 62);
             this.addColomn.TabIndex = 11;
@@ -207,7 +207,7 @@
             // 
             // rmvCol
             // 
-            this.rmvCol.Location = new System.Drawing.Point(1022, 48);
+            this.rmvCol.Location = new System.Drawing.Point(1020, 55);
             this.rmvCol.Name = "rmvCol";
             this.rmvCol.Size = new System.Drawing.Size(73, 62);
             this.rmvCol.TabIndex = 16;
@@ -217,7 +217,7 @@
             // 
             // rmFileRef
             // 
-            this.rmFileRef.Location = new System.Drawing.Point(589, 49);
+            this.rmFileRef.Location = new System.Drawing.Point(594, 55);
             this.rmFileRef.Name = "rmFileRef";
             this.rmFileRef.Size = new System.Drawing.Size(189, 23);
             this.rmFileRef.TabIndex = 17;
@@ -232,7 +232,7 @@
             "  -  Tabs",
             ", -  Comma",
             ". -  Period"});
-            this.cmboBxSepVal.Location = new System.Drawing.Point(396, 40);
+            this.cmboBxSepVal.Location = new System.Drawing.Point(396, 57);
             this.cmboBxSepVal.Name = "cmboBxSepVal";
             this.cmboBxSepVal.Size = new System.Drawing.Size(126, 21);
             this.cmboBxSepVal.TabIndex = 18;
@@ -240,7 +240,7 @@
             // slctSepVal
             // 
             this.slctSepVal.AutoSize = true;
-            this.slctSepVal.Location = new System.Drawing.Point(396, 22);
+            this.slctSepVal.Location = new System.Drawing.Point(396, 39);
             this.slctSepVal.Name = "slctSepVal";
             this.slctSepVal.Size = new System.Drawing.Size(126, 13);
             this.slctSepVal.TabIndex = 19;

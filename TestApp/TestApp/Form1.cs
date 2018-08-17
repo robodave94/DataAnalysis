@@ -28,9 +28,9 @@ namespace TestApp
                 folderDialog.ShowDialog();
                 dirLabel.Text = folderDialog.SelectedPath;
             }
-            catch
+            catch (Exception ex)
             {
-                MessageBox.Show("An Error Occured");
+                MessageBox.Show("An Error Occured: " + ex.ToString());
             }
         }
 
@@ -53,9 +53,9 @@ namespace TestApp
                 //System.Windows.Forms.MessageBox.Show("Files found: " + files[0], "Message");
                 //Recursivly find all files ending in .file extension
             }
-            catch
+            catch (Exception ex)
             {
-                MessageBox.Show("An Error Occured");
+                MessageBox.Show("An Error Occured: " + ex.ToString());
             }
         }
 
@@ -111,9 +111,9 @@ namespace TestApp
             {
                 LstOfNames.Items[LstOfNames.SelectedIndex] = nametxtbx.Text;
             }
-            catch
+            catch (Exception ex)
             {
-                MessageBox.Show("An Error Occured");
+                MessageBox.Show("An Error Occured: " + ex.ToString());
             }
         }
 
@@ -126,9 +126,9 @@ namespace TestApp
                 else
                     lstofColoumns.Items.Add(coltxtbox.Text);
             }
-            catch
+            catch (Exception ex)
             {
-                MessageBox.Show("An Error Occured");
+                MessageBox.Show("An Error Occured: " + ex.ToString());
             }
         }
 
@@ -138,9 +138,9 @@ namespace TestApp
             {
                 lstofColoumns.Items.RemoveAt(lstofColoumns.SelectedIndex);
             }
-            catch
+            catch (Exception ex)
             {
-                MessageBox.Show("An Error Occured");
+                MessageBox.Show("An Error Occured: " + ex.ToString());
             }
         }
 
@@ -218,10 +218,10 @@ namespace TestApp
                 MessageBox.Show("Content written to \"" + dirLabel.Text + "\\" + OutptFileTxt.Text + ".csv" + "\"");
                 writableContent = new List<List<string>>();
             }
-            catch
+            catch (Exception e)
             {
                 writableContent = new List<List<string>>();
-                MessageBox.Show("An Error Occured");
+                MessageBox.Show("An Error Occured: " + e.ToString());
             }
         }
 
@@ -271,9 +271,8 @@ namespace TestApp
                         //writable content correct
                         foreach (List<string> ls in writableContent)
                         {
-
                             foreach (string line in ls) {
-
+                                file.WriteLine(line);
                             }
                         }
                         file.WriteLine(content);
@@ -284,10 +283,10 @@ namespace TestApp
                 MessageBox.Show("Content written to \"" + dirLabel.Text + "\\" + OutptFileTxt.Text + ".csv" + "\"");
                 writableContent = new List<List<string>>();
             }
-            catch
+            catch(Exception e)
             {
                 writableContent = new List<List<string>>();
-                MessageBox.Show("An Error Occured");
+                MessageBox.Show("An Error Occured: "+e.ToString());
             }
         }
 
@@ -316,7 +315,7 @@ namespace TestApp
                 while ((line = file.ReadLine()) != null)
                 {
                     List<string> structureAnalysis = line.Split(separator.ToCharArray()).ToList();
-                    if (line.Contains(lstofColoumns.Items[0].ToString()) && foundHeaders == false)
+                    if (ReadAll == false&&line.Contains(lstofColoumns.Items[0].ToString()) && foundHeaders == false)
                     {
                         foundHeaders = true;
                         //foreach (var obj in lstofColoumns.Items) {
@@ -327,7 +326,7 @@ namespace TestApp
                             {
                                 foundHeaders = false;
                                 break;
-                            }
+                            }                            
                             else
                             {
                                 indices.Add(structureAnalysis.IndexOf(obj.ToString()));
@@ -350,7 +349,13 @@ namespace TestApp
                             analysisData.Add(titleLine);
                         }
                     }
-                    else if (foundHeaders == true)
+                    else if (ReadAll == true && foundHeaders==false && (line.Contains("Time")|| line.Contains("time")))
+                    {
+                        foundHeaders = true;
+                        writableContent.Add(new List<string>());
+                        writableContent[0].Add(line + "\n");
+                    }
+                    else if (foundHeaders == true && ReadAll == false)
                     {
                         string inputline = ",";
                         foreach (int q in indices)
@@ -359,14 +364,18 @@ namespace TestApp
                         }
                         analysisData.Add(inputline);
                     }
+                    else if (foundHeaders == true && ReadAll == true)
+                    {
+                        writableContent[0].Add(line + "\n");
+                    }
                     counter++;
                 }
                 writableContent.Add(analysisData);
                 file.Close();
             }
-            catch
+            catch (Exception e)
             {
-                MessageBox.Show("An Error Occured");
+                MessageBox.Show("An Error Occured: " + e.ToString());
             }
         }
 
@@ -377,9 +386,9 @@ namespace TestApp
                 LstOfNames.Items.RemoveAt(FileFnd.SelectedIndex);
                 FileFnd.Items.RemoveAt(FileFnd.SelectedIndex);
             }
-            catch
+            catch (Exception ex)
             {
-                MessageBox.Show("An Error Occured");
+                MessageBox.Show("An Error Occured: " + ex.ToString());
             }
         }
 
